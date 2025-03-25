@@ -1,0 +1,59 @@
+
+#doctors-ul {
+    display: flex; /* Arrange cards in a row */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px; /* Space between cards */
+    padding: 10px; /* Padding inside the container */
+}
+
+.doctor-card {
+    width: 300px; /* Fixed width for each card */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Space inside the card */
+    background-color: #f9f9f9; /* Light background color */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.profile-pic {
+    width: 80px; /* Set width for profile picture */
+    height: 80px; /* Set height for profile picture */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Cover the area without distortion */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.doctor-info {
+    width: 100%; /* Full width for the info */
+}
+
+.doctor-actions {
+    margin-top: 10px; /* Space above the button */
+    text-align: center; /* Center the button */
+}
+
+.edit-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 8px 12px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size */
+}
+
+.edit-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+@media (max-width: 600px) {
+    #edit-form-container {
+        width: 100%; /* Full width on small screens */
+        height: auto; /* Auto height */
+    }
+}

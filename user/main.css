@@ -1,0 +1,378 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack header and container vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.header {
+    background-color: #2e87b7;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px; /* Increased font size for better visibility */
+}
+
+.container {
+    display: flex;
+    flex: 1; /* Take up remaining space */
+}
+
+.sidebar {
+    width: 200px; /* Fixed width for sidebar */
+    background-color: #f4f4f4;
+    color: #fff;
+    padding: 15px;
+    height: 88vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.sidebar h3 {
+    margin-top: 0; /* Remove top margin for better alignment */
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar ul li {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin: 10px 0; /* Space between menu items */
+    cursor:default;
+    transition: background-color 0.3s ease;
+    color: inherit;
+    border-radius: 5px;
+
+}
+
+.sidebar ul li img {
+    width: 24px; /* Set a fixed width for the icons */
+    height: 24px; /* Set a fixed height for the icons */
+    margin-right: 10px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+.sidebar ul li a{
+    text-decoration: none;
+}
+.sidebar ul li a:hover {
+    color: #28a745;
+}
+
+.search-bar-right {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.search-bar-right form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-right input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar-right button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-bar-right button[type="submit"]:hover {
+    background-color: #45a049;
+}
+.doctor-card {
+    width: 450px;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    margin-top: 120px;
+    flex-basis: 250px;
+}
+.doctor-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    max-width: 1500px; /* Set a maximum width for the container */
+    max-height: 80vh; /* Set a maximum height for the container */
+    overflow-y: auto; /* Add a scrollbar when the content exceeds the height */
+    scrollbar-width:none; /* Set the scrollbar width to thin */
+    scrollbar-color: #ccc #fff; /* Set the scrollbar color to gray and white */
+}   
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.doctor-info {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.doctor-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.doctor-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.book-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.book-btn:hover {
+    background-color: #45a049;
+}
+
+.appointment-details {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 270px;
+}
+
+.doctor-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.doctor-about {
+    width: 500px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.appointment-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.dashboard-menu {
+    position: fixed;
+    top: 80px; /* Adjust the top margin to match the header height */
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Form Container */
+.appointment-form {
+    position: fixed; /* Fixed position to keep it centered */
+    top: 53%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 1000px;
+    max-height: 80vh; /* Limit height to 80% of viewport height */
+    overflow-y: auto; /* Make it scrollable if content exceeds height */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form Title */
+.appointment-form h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Form Group (Each Input Field) */
+.appointment-form .form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.appointment-form label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Input Fields */
+.appointment-form input[type="text"],
+.appointment-form input[type="number"],
+.appointment-form input[type="date"],
+.appointment-form input[type="time"],
+.appointment-form select,
+.appointment-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-form input[type="text"]:focus,
+.appointment-form input[type="number"]:focus,
+.appointment-form input[type="date"]:focus,
+.appointment-form input[type="time"]:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+/* Textarea */
+.appointment-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit Button */
+.appointment-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Close Button (Optional) */
+.appointment-form .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-form .close-btn:hover {
+    background-color: #e60000;
+}
+
+.book-appointment-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.book-appointment-btn:hover {
+    background-color: #45a049;
+}
+
+.notification-menu {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.notification-menu h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.notification-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notification-menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.notification-menu ul li small {
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+

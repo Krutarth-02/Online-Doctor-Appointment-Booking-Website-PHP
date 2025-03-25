@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack header and container vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.header {
+    background-color: #2e87b7;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px; /* Increased font size for better visibility */
+}
+
+.container {
+    display: flex;
+    flex: 1; /* Take up remaining space */
+}
+
+.sidebar {
+    width: 200px; /* Fixed width for sidebar */
+    background-color: #f4f4f4;
+    color: #fff;
+    padding: 15px;
+    height: 88vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.sidebar h3 {
+    margin-top: 0; /* Remove top margin for better alignment */
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar ul li {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin: 10px 0; /* Space between menu items */
+    cursor:default;
+    transition: background-color 0.3s ease;
+    color: inherit;
+    border-radius: 5px;
+
+}
+
+.sidebar ul li img {
+    width: 24px; /* Set a fixed width for the icons */
+    height: 24px; /* Set a fixed height for the icons */
+    margin-right: 10px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
+.sidebar ul li a{
+    text-decoration: none;
+}
+.sidebar ul li a:hover {
+    color: #28a745;
+}
+
+#dashboard-container {
+    flex: 1; /* Take up remaining space */
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+#totals-container {
+    display: flex; /* Align totals boxes in a row */
+    margin-bottom: 20px; /* Space below totals */
+    margin-top: 40px;
+}
+
+.totals-box {
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    text-align: center; /* Center text */
+    flex: 1; /* Allow boxes to grow */
+    margin-right: 20px; /* Space between boxes */
+}
+.totals-box img{
+    width:80px;
+    height: 70px;
+}
+.totals-box:last-child {
+    margin-right: 0; /* No margin for the last box */
+}
+/* Form Styles */
+
+#add-doctor-btn{
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 9%;
+    height: 7%;
+}
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-group label {
+    margin-right: 15px;
+}
+.right-section {
+    float: right;
+    margin-top: 15px;
+}
+#content-area {
+    margin-left: 20px; /* Adjust as needed */
+    padding: 10px;
+    border-left: 1px solid #ccc;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+#add-doctor-form {
+    display: none; /* Hide the form by default */
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px; /* Space inside the form */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 1000px; /* Fixed width */
+    margin: 50px auto; /* Center the form horizontally */
+    margin-bottom: 50px;
+    max-width: 1000px; /* Set a maximum width for the container */
+    max-height: 80vh; /* Set a maximum height for the container */
+    overflow-y: auto; /* Add a scrollbar when the content exceeds the height */
+    scrollbar-width:none; /* Set the scrollbar width to thin */
+    scrollbar-color: #ccc #fff; /* Set the scrollbar color to gray and white */
+}
+
+#add-doctor-form.show {
+    display: block; /* Show the form when the button is clicked */
+}
+
+#add-doctor-form h2 {
+    margin-top: 0; /* Remove top margin */
+    font-size: 24px; /* Larger font size */
+    color: #333; /* Dark gray text */
+}
+
+#add-doctor-form label {
+    display: block; /* Display labels as blocks */
+    margin-bottom: 10px; /* Space between label and input */
+    font-weight: bold; /* Bold labels */
+}
+
+#add-doctor-form input[type="text"],
+#add-doctor-form input[type="email"],
+#add-doctor-form input[type="password"],
+#add-doctor-form input[type="number"],
+#add-doctor-form input[type="time"],
+#add-doctor-form select {
+    width: 150%; /* Full width */
+    padding: 10px; /* Space inside the input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Medium font size */
+    color: #333; /* Dark gray text */
+    margin-bottom: 20px; /* Space between inputs */
+}
+
+#add-doctor-form input[type="file"] {
+    width: 247%; /* Full width */
+    padding: 10px; /* Space inside the input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Medium font size */
+    color: #333; /* Dark gray text */
+    margin-bottom: 20px; /* Space between inputs */
+}
+
+#add-doctor-form button[type="submit"] {
+    width: 60%; /* Full width */
+    padding: 10px; /* Space inside the button */
+    background-color: #4CAF50; /* Green background */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Medium font size */
+    margin-left: 250px;
+}
+
+#add-doctor-form button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
